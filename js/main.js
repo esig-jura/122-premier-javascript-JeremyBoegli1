@@ -54,3 +54,13 @@ btAjouter.addEventListener('click', ajouter);
     txtArticle.value = '';
     txtArticle.focus();
 }); */
+
+//Ecoute les frappes claviers sur le champ texte
+txtArticle.addEventListener('keypress', (event) => {
+    //Affiche le code de la touche clavier dans la console
+    console.log(event.key);
+    //Si la touche est Enter
+    if(event.key === 'Enter'){
+        btAjouter.click(); // Simule le clic du bouton ajouter
+    }
+});
